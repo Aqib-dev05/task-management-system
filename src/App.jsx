@@ -5,9 +5,10 @@ import Button from './components/Button'
 import EmployeeDashboard from './components/dashboard/employee/EmployeeDashboard'
 
 function App() {
+  
   return (
     <>
-        <EmployeeDashboard/>
+        <Login/>
     </>
   )
 }

@@ -4,7 +4,7 @@ import TaskCount from './TaskCount'
 import ActiveTask from './ActiveTask'
 function EmployeeDashboard() {
   return (
-    <section className='bg-[#000] min-h-screen text-white'>
+    <section className='bg-[#191919] min-h-screen text-white'>
       <Nav />
       <div className='mt-10 max-md:px-1 py-5 max-lg:px-3  px-16 grid max-md:grid-cols-2 grid-cols-4 gap-4'>
         <TaskCount count={4} bc={"#5b6ed9"} info={"New Task"} />

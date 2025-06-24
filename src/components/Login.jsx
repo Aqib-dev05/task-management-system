@@ -1,12 +1,9 @@
-import React,{useEffect} from "react";
+import React from "react";
 import Button from "./Button";
 
 function Login() {
 
-  useEffect(() => {
-    document.title="Login"
-    
-  }, []);
+
 
   const inpStyle =
     "border-[#dadada] border-2 p-4 rounded-2xl w-full text-white placeholder:text-white focus:outline-0";

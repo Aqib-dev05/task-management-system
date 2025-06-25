@@ -6,13 +6,22 @@ import EmployeeDashboard from './components/dashboard/employee/EmployeeDashboard
 import { useContext } from 'react'
 import { AppContext } from './context/AppContext'
 function App() {
-  
-  const {formData} =useContext(AppContext);
+
+  const { user } = useContext(AppContext);
 
   return (
     <>
-        <Login/>
-       
+
+      {!user || !user.role ? (
+        <Login />
+      ) : user.role === "admin" ? (
+        <AdminDashboard />
+      ) : user.role === "employee" ? (
+        <EmployeeDashboard />
+      ) : (
+        <Login />
+      )}
+
     </>
   )
 }

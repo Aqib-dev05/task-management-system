@@ -6,10 +6,7 @@ import axios from "axios";
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [user, setUser] = useState({
-    role:"",
-    info:""
-  });
+  const [user, setUser] = useState(null);
   const [dummyData, setDummyData] = useState();
   const [formData, setFormData] = useState({
     email: "",
@@ -63,7 +60,7 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ formData, dummyData, handleInputChange, handleFormSubmittion }}
+      value={{ formData,user, dummyData, handleInputChange, handleFormSubmittion }}
     >
       {children}
     </AppContext.Provider>

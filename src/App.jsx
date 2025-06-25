@@ -5,23 +5,24 @@ import Button from './components/Button'
 import EmployeeDashboard from './components/dashboard/employee/EmployeeDashboard'
 import { useContext } from 'react'
 import { AppContext } from './context/AppContext'
+import { GetLocally } from './utils/LocalStore'
 function App() {
 
   const { user } = useContext(AppContext);
+      const role = JSON.parse(localStorage.getItem("role"));
+
 
   return (
     <>
-
-      {!user || !user.role ? (
+      {!role ? (
         <Login />
-      ) : user.role === "admin" ? (
+      ) : role === "admin" ? (
         <AdminDashboard />
-      ) : user.role === "employee" ? (
+      ) : role === "employee" ? (
         <EmployeeDashboard />
       ) : (
         <Login />
       )}
-
     </>
   )
 }

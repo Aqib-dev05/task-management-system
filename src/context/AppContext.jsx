@@ -2,6 +2,8 @@
 // AppContext.js
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import { SetLocally,GetLocally } from "../utils/LocalStore";
+
 
 export const AppContext = createContext();
 
@@ -40,6 +42,7 @@ export const AppProvider = ({ children }) => {
           role: "admin",
           info: foundUser.email
         }))
+        SetLocally(user)
       }
       else {
        setUser((prev)=>({
@@ -47,12 +50,15 @@ export const AppProvider = ({ children }) => {
           role: "employee",
           info: foundUser.email
         }))
+        SetLocally(user)
+
       }
       console.log(user)
     }
     else{
       
       setUser({ role: "", info: "" });
+      localStorage.clear();
       alert("Unmatched cradentials");
     }
     

@@ -13,17 +13,24 @@ function App() {
 
 
       useEffect(()=>{
+
+        let fvIco=document.getElementById("favicon");
+
         if(!role){
           document.title="Login Page"
+          fvIco.href="/public/favIcon/login-box-fill.png"
         }
         else if(role === "admin"){
           document.title="Admin Dashboard"
+          fvIco.href="/public/favIcon/admin-favicon.png"
         }
         else if(role === "employee"){
           document.title="Employee Dashboard"
+          fvIco.href="/public/favIcon/service-fill.png"
         }
         else{
           document.title="Login Page"
+          fvIco.href="/public/favIcon/login-box-fill.png"
         }
       },[role])
 

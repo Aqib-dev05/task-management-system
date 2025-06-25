@@ -1,6 +1,7 @@
 import React from 'react'
 
 function SetLocally(user) {
+
    localStorage.setItem("role",JSON.stringify(user.role));
 }
 

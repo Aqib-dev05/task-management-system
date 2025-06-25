@@ -1,4 +1,9 @@
-const Employees = [
+[
+    {
+        "id": 0,
+        "email": "admin@example.com",
+        "password": "123"
+    },
     {
         "id": 1,
         "email": "e1@example.com",
@@ -149,11 +154,3 @@ const Employees = [
         ]
     }
 ]
-
-const Admin = {
-    "id": 1,
-    "email": "admin@example.com",
-    "password": "123",
-}
-
-export {Employees,Admin}

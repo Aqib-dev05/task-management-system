@@ -53,7 +53,6 @@ export const AppProvider = ({ children }) => {
         SetLocally(user)
 
       }
-      console.log(user)
     }
     else{
       

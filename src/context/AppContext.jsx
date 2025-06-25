@@ -16,7 +16,7 @@ export const AppProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    axios.get("/src/utils/Data.json")
+    axios.get("/public/Data.json")
       .then((res) => {
         setDummyData(res.data)
       })

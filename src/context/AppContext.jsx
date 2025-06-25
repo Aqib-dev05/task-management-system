@@ -60,7 +60,7 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ formData,user, dummyData, handleInputChange, handleFormSubmittion }}
+      value={{ formData,user,setUser, dummyData, handleInputChange, handleFormSubmittion }}
     >
       {children}
     </AppContext.Provider>

@@ -1,7 +1,12 @@
 import React from 'react'
 import Button from './Button'
+import { useContext } from 'react'
+import {AppContext} from "../context/AppContext"
 
 function Nav() {
+
+ const {setUser} =useContext(AppContext)
+
   return (
     <header>
         <nav className='w-full bg-black py-6 flex items-center justify-between text-white max-md:px-4 max-sm:px-1 md:px-15 '>
@@ -10,7 +15,7 @@ function Nav() {
                 <h1 className=' text-3xl font-bold font-[sans] ' >Username {'\u{1f44b} '}</h1>
             </div>
             <div>
-                <Button text={"Log Out"} type={"Button"} varient={'outVar'} />
+                <Button onclick={()=>setUser({ role: "", info: "" })} text={"Log Out"} type={"Button"} varient={'outVar'} />
             </div>
         </nav>
     </header>
